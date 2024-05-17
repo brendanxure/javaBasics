@@ -21,7 +21,7 @@ public class Main {
         final int SMALL_SCOOP = 1;
         final int MEDIUM_SCOOP = 2;
         final int LARGE_SCOOP = 3;
-        final int SCOOP_TO_ML = 120;
+        final double SCOOP_TO_L = 0.12;
 
         // Declare variable to hold the user input
         // to hold the amount of kiddie cone input by user
@@ -35,7 +35,7 @@ public class Main {
         // To hold the total amount of scoops after conversion
         double totalAmountOfScoops;
         // To hold the total amount in ml after conversion
-        double totalSoldInMl;
+        double totalSoldInL;
 
         // To accept input from keyboard
         Scanner input = new Scanner(System.in);
@@ -67,9 +67,9 @@ public class Main {
                             + ((double) largeCone * LARGE_SCOOP);
 
         // To calculate the total quantity sold in ml
-        totalSoldInMl = SCOOP_TO_ML * totalAmountOfScoops;
+        totalSoldInL = SCOOP_TO_L * totalAmountOfScoops;
 
         // To display the required result
-        System.out.printf("Total Amount Sold is: %,.2f ml", totalSoldInMl);
+        System.out.printf("Total Amount Sold is: %,.2f L", totalSoldInL);
     }
 }
