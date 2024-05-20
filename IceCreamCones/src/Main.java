@@ -40,10 +40,14 @@ public class Main {
         // To accept input from keyboard
         Scanner input = new Scanner(System.in);
 
-        // To collect user input for kiddie cone
-        System.out.print("How many kiddie cone have to sold: ");
-        // To store the input to the variable and validate the input
-        kiddieCone = input.nextInt();
+        try{
+            // To collect user input for kiddie cone
+            System.out.print("How many kiddie cone have to sold: ");
+            // To store the input to the variable and validate the input
+            kiddieCone = input.nextInt();
+        } catch (NumberFormatException e) {
+             System.out.print("Invalid input format ");
+        }
 
         // To collect user input for small cone
         System.out.print("How many small cone have to sold: ");
