@@ -9,5 +9,6 @@ public class Main {
         final int A_PLUS_MAX = 100;
         final int A_PLUS_MIN = 90;
         final int A_MINUS_MIN = 85;
+        final int B_MIN = 80;
     }
 }
