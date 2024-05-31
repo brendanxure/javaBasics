@@ -12,5 +12,6 @@ public class Main {
         final int B_MIN = 80;
         final int B_MINUS_MIN = 75;
         final int C_PLUS_MIN = 70;
+        final int C_MIN = 65;
     }
 }
