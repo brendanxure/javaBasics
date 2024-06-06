@@ -2,10 +2,21 @@
 // click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
 public class Main {
     public static void main(String[] args) {
-        PlayingCard myCard = new PlayingCard();
-        PlayingCard yourCard = new PlayingCard();
-        System.out.printf("My card is %d of %d\n", myCard.GetRank(), myCard.GetSuit());
-        System.out.printf("Your card is %d of %d\n", yourCard.GetRank(), yourCard.GetSuit());
-
+        try {
+            PlayingCard myCard = new PlayingCard();
+            PlayingCard yourCard = new PlayingCard();
+            System.out.printf("My card is %s\n", myCard.ToString());
+            System.out.printf("Your card is %s\n", yourCard.ToString());
+            myCard.SetRank(8);
+            myCard.SetSuit(4);
+            System.out.printf("My card is now %s\n", myCard.ToString());
+            myCard.FlipCard();
+            System.out.printf("My card is now %s\n", myCard.ToString());
+            myCard.FlipCard();
+            System.out.printf("My card is now %s\n", myCard.ToString());
+        }
+        catch (Exception ex){
+            System.out.println("Sorry - " + ex.getMessage());
+        }
     }
 }
