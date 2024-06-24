@@ -15,5 +15,7 @@ public class Main {
         final int C_MIN = 65;
         final int D_MIN = 60;
         final int F_MAX = 50;
+
+        Scanner input = new Scanner(System.in);
     }
 }
