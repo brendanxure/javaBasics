@@ -17,5 +17,6 @@ public class Main {
         final int F_MAX = 50;
 
         Scanner input = new Scanner(System.in);
+        System.out.println("Please enter your grade");
     }
 }
