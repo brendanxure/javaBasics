@@ -18,5 +18,6 @@ public class Main {
 
         Scanner input = new Scanner(System.in);
         System.out.println("Please enter your grade");
+        int answer  = input.nextInt();
     }
 }
