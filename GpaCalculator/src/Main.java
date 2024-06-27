@@ -19,5 +19,8 @@ public class Main {
         Scanner input = new Scanner(System.in);
         System.out.println("Please enter your grade");
         int answer  = input.nextInt();
+        if(answer >= A_MINUS_MIN && answer <= A_PLUS_MAX){
+            
+        }
     }
 }
