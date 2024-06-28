@@ -20,7 +20,7 @@ public class Main {
         System.out.println("Please enter your grade");
         int answer  = input.nextInt();
         if(answer >= A_MINUS_MIN && answer <= A_PLUS_MAX){
-            
+            System.out.println("You current gp is A plus");
         }
     }
 }
