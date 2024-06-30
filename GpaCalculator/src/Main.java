@@ -20,7 +20,7 @@ public class Main {
         if(answer >= A_PLUS_MIN && answer <= A_PLUS_MAX){
             System.out.println("You current gp is A plus");
         } else if (answer >= A_MINUS_MIN) {
-
+            System.out.println("You current gp is A");
         }
     }
 }
