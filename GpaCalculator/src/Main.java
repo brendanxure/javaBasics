@@ -29,6 +29,8 @@ public class Main {
             System.out.println("You current gp is B-");
         }  else if (answer >= C_MIN) {
             System.out.println("You current gp is C");
+        }  else if (answer >= D_MIN) {
+            System.out.println("You current gp is C");
         }
     }
 }
