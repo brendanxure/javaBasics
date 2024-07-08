@@ -24,13 +24,15 @@ public class Main {
         } else if (answer >= B_MIN) {
             System.out.println("You current gp is A-");
         } else if (answer >= B_MINUS_MIN) {
-            System.out.println("You current gp is B");
+            System.out.println("You current gp is B+");
         } else if (answer >= C_PLUS_MIN) {
-            System.out.println("You current gp is B-");
+            System.out.println("You current gp is B");
         }  else if (answer >= C_MIN) {
-            System.out.println("You current gp is C");
+            System.out.println("You current gp is B-");
         }  else if (answer >= D_MIN) {
             System.out.println("You current gp is C");
+        }  else if (answer >= F_MAX) {
+            System.out.println("You current gp is D");
         }
     }
 }
