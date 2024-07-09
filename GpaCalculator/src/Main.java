@@ -33,6 +33,8 @@ public class Main {
             System.out.println("You current gp is C");
         }  else if (answer >= F_MAX) {
             System.out.println("You current gp is D");
+        }  else {
+            System.out.println("Your current gp is F");
         }
     }
 }
