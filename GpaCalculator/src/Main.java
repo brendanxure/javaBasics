@@ -18,21 +18,21 @@ public class Main {
 
         Scanner input = new Scanner(System.in);
         if(answer >= A_PLUS_MIN && answer <= A_PLUS_MAX){
-            System.out.println("You current gp is A plus");
+            System.out.println("Your current gp is A plus");
         } else if (answer >= A_MINUS_MIN) {
-            System.out.println("You current gp is A");
+            System.out.println("Your current gp is A");
         } else if (answer >= B_MIN) {
-            System.out.println("You current gp is A-");
+            System.out.println("Your current gp is A-");
         } else if (answer >= B_MINUS_MIN) {
-            System.out.println("You current gp is B+");
+            System.out.println("Your current gp is B+");
         } else if (answer >= C_PLUS_MIN) {
-            System.out.println("You current gp is B");
+            System.out.println("Your current gp is B");
         }  else if (answer >= C_MIN) {
-            System.out.println("You current gp is B-");
+            System.out.println("Your current gp is B-");
         }  else if (answer >= D_MIN) {
-            System.out.println("You current gp is C");
+            System.out.println("Your current gp is C");
         }  else if (answer >= F_MAX) {
-            System.out.println("You current gp is D");
+            System.out.println("Your current gp is D");
         }  else {
             System.out.println("Your current gp is F");
         }
