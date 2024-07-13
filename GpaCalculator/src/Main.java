@@ -15,6 +15,7 @@ public class Main {
         final int C_MIN = 65;
         final int D_MIN = 60;
         final int F_MAX = 50;
+        final int ZERO = 0;
 
         Scanner input = new Scanner(System.in);
         if(answer >= A_PLUS_MIN && answer <= A_PLUS_MAX){
@@ -33,7 +34,7 @@ public class Main {
             System.out.println("Your current gp is C");
         }  else if (answer >= F_MAX) {
             System.out.println("Your current gp is D");
-        }  else {
+        }  else if (answer>= ZERO) {
             System.out.println("Your current gp is F");
         }
     }
