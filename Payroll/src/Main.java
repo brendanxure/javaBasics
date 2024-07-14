@@ -25,7 +25,18 @@ public class Main {
         try{
             LocalDate birthDate = LocalDate.of(1942, 10, 10);
             Employee[] myStaff = new Employee[5];
-            myStaff[0] = new HourlyWorker("Ruby Senter Alexandria", birthDate, "98765432", 2.0, 94.0);
+            double totalSalary = 0.0;
+            myStaff[0] = new SalariedStaff("Ruby Senter Alexandria", birthDate, "98765432", 45000);
+            myStaff[1] = new SalariedStaff("Mercy Senter Aputs", birthDate, "98765432", 45000);
+            myStaff[2] = new HourlyWorker("Edwinah Niinsima Lynn", birthDate, "98765432", 2.0, 94.0);
+            myStaff[3] = new HourlyWorker("Malaekah Senter Kahn", birthDate, "98765432", 2.0, 94.0);
+            myStaff[4] = new HourlyWorker("Brendan Xure Obilo", birthDate, "98765432", 2.0, 94.0);
+            for (int index = 0; index < 5; index++){
+                System.out.println(myStaff[index].getEmployeeID() + " " + myStaff[index].getName() +
+                        " $" + myStaff[index].calculatePayDay());
+                totalSalary += myStaff[index].calculatePayDay();
+            }
+            System.out.println("Total amount paid this week: $" + totalSalary);
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
