@@ -25,19 +25,11 @@ public class HourlyWorker extends Employee{
     // Mutators
     public void SetHourlyRate(double rate){
         rate = Math.abs(rate);
-        if (rate < MINIMUM_WAGE){
-            hourlyRate = MINIMUM_WAGE;
-        } else {
-            hourlyRate = rate;
-        }
+        hourlyRate = Math.max(rate, MINIMUM_WAGE);
     }
 
     public void SetHourlyWorked(double hours){
         hours = Math.abs(hours);
-        if (hours > MAXIMUM_HOURS){
-            hoursWorked = MAXIMUM_HOURS;
-        } else {
-            hoursWorked = hours;
-        }
+        hoursWorked = Math.min(hours, MAXIMUM_HOURS);
     }
 }
