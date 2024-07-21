@@ -40,5 +40,25 @@ public class Main {
         } catch (Exception ex) {
             System.out.println(ex.getMessage());
         }
+        try{
+            LocalDate birthDate = LocalDate.of(1942, 10, 10);
+            // A header
+            System.out.println("\n\t\t\tTo express exception handling");
+            SalariedStaff fred = new SalariedStaff("Fred Williams Bloogs", birthDate, "123478", 65000);
+            System.out.printf("%s with ID %s earns $%.2f weekly\n", fred.getName(), fred.getEmployeeID(), fred.calculatePayDay());
+        } catch (Exception ex){
+            // To handle exception and display the error message
+            System.out.println(ex.getMessage());
+        }
+        try {
+            LocalDate birthDate = LocalDate.of(1942, 10, 10);
+            // A header for intern Stipends
+            System.out.println("\n\t\t\tIntern Stipend");
+            Intern stephen = new Intern("Stephen William Senter", birthDate, "12345854");
+            System.out.printf("%s with ID %s earns $%.2f weekly\n", stephen.getName(), stephen.getEmployeeID(), stephen.calculatePayDay());
+        } catch (Exception ex){
+            // To handle exception and display the error message
+            System.out.println(ex.getMessage());
+        }
     }
 }
