@@ -14,8 +14,7 @@ public class SalariedStaff extends Employee{
     }
 
     public double calculatePayDay(){
-        double retVal = Math.round((salary*100.0/WEEKS_PER_YEAR)/100);
-        return retVal;
+       return (Math.round(salary*100.0/WEEKS_PER_YEAR))/100.0;
     }
 
 }
