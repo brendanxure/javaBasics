@@ -4,6 +4,7 @@ import java.awt.*;
 import java.awt.event.KeyEvent;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 
 public class MyWindow {
     private JFrame window;
@@ -14,6 +15,10 @@ public class MyWindow {
         window.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         window.setSize(400, 400);
         window.setLocationRelativeTo(null);
+
+        JButton btnExit = new JButton("Exit");
+        JButton btnReset = new JButton("Reset");
+        JButton btnCalculate = new JButton("Calculate");
 
         JLabel lblLength = new JLabel("Length:");
         lblLength.setBounds(50,50,80,30);
@@ -32,6 +37,31 @@ public class MyWindow {
         txtWidth.setToolTipText("Please enter the width.");
         window.add(txtWidth);
 
+        JRadioButton rbMetric = new JRadioButton("Meters");
+        rbMetric.setBounds(275, 50, 100, 30);
+        rbMetric.setSelected(true);
+        rbMetric.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                btnReset.doClick();
+            }
+        });
+        window.add(rbMetric);
+
+        JRadioButton rbImperial = new JRadioButton("Feet");
+        rbImperial.setBounds(275, 100, 100, 30);
+        rbImperial.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                btnReset.doClick();
+            }
+        });
+        window.add(rbImperial);
+
+        ButtonGroup uom = new ButtonGroup();
+        uom.add(rbMetric);
+        uom.add(rbImperial);
+
         JLabel lblArea = new JLabel("The area is ...");
         lblArea.setBounds(150,200,200,30);
         window.add(lblArea);
@@ -43,7 +73,7 @@ public class MyWindow {
         JColorChooser ccMine = new JColorChooser();
         ccMine.setBounds(50,300,300,300);
         window.add(ccMine);
-        JButton btnReset = new JButton("Reset");
+
         btnReset.setBounds(50,150,95,30);
         btnReset.setToolTipText("Reset the application to starting values.");
         btnReset.setMnemonic(KeyEvent.VK_R);
@@ -56,11 +86,16 @@ public class MyWindow {
                 lblPerimeter.setText("The perimeter is ....");
                 txtLength.setBackground(ccMine.getColor());
                 txtWidth.setBackground(ccMine.getColor());
+
+                JFileChooser fileChooser = new JFileChooser();
+                int result = fileChooser.showOpenDialog(window);
+                File selectedFile = fileChooser.getSelectedFile();
+                System.out.println(selectedFile);
             }
         });
         window.add(btnReset);
 
-        JButton btnCalculate = new JButton("Calculate");
+
         btnCalculate.setBounds(150,150,95,30);
         btnCalculate.setToolTipText("Calculate and report the area and perimeter.");
         btnCalculate.setMnemonic(KeyEvent.VK_C);
@@ -79,8 +114,10 @@ public class MyWindow {
                         iWidth = Integer.parseInt(txtWidth.getText());
                         int iArea = iLength * iWidth;
                         int iPerimeter = (2*iLength) + (2*iWidth);
-                        lblPerimeter.setText(String.format("The area is %d", iPerimeter));
-                        lblArea.setText(String.format("The area is %d", iArea));
+                        String sUOMArea = rbMetric.isSelected()? "meters" : "feet";
+                        String sUOMPerimeter = rbMetric.isSelected()? "square meters" : "square feet";
+                        lblPerimeter.setText(String.format("The perimeter is %d %s", iPerimeter, sUOMPerimeter));
+                        lblArea.setText(String.format("The area is %d %s", iArea, sUOMArea));
                     }
                     catch (Exception ex){
                         txtWidth.setBackground(Color.RED);
@@ -93,7 +130,7 @@ public class MyWindow {
         });
         window.add(btnCalculate);
 
-        JButton btnExit = new JButton("Exit");
+
         btnExit.setBounds(250,150,95,30);
         btnExit.setToolTipText("Exit the application.");
         btnExit.setMnemonic(KeyEvent.VK_X);
