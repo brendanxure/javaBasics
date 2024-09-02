@@ -24,6 +24,7 @@ public class Main {
         Student niinsima = new Student("Niinsima Lynn", 1, 95);
         Student khan = new Student("Khan Malaekah", 2, 80);
         Student ritik = new Student("Ritik Sharma", 3, 100);
+        Student sammer = new Student("Sammer Moussa", 4, 70);
 
         // List of students
         List<Student> studentList = new ArrayList<>();
