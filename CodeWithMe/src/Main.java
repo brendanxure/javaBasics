@@ -39,6 +39,7 @@ public class Main {
         niinsima.payFees(5000);
         System.out.println(NumberFormat.getCurrencyInstance(Locale.CANADA).format(durhamCollege.getTotalMoneyEarned()));
 
+        sammer.payFees(4500);
 
         // Teachers being paid salary
         mercy.receivedSalary(mercy.getSalary());
