@@ -40,6 +40,7 @@ public class Main {
         System.out.println(NumberFormat.getCurrencyInstance(Locale.CANADA).format(durhamCollege.getTotalMoneyEarned()));
 
         sammer.payFees(4500);
+        System.out.println(NumberFormat.getCurrencyInstance(Locale.CANADA).format(durhamCollege.getTotalMoneyEarned()));
 
         // Teachers being paid salary
         mercy.receivedSalary(mercy.getSalary());
