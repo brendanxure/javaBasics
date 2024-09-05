@@ -34,6 +34,7 @@ public class Main {
 
         School durhamCollege = new School(listOfTeacher, studentList);
         khan.payFees(6000);
+        khan.payFees(500);
         System.out.println(NumberFormat.getCurrencyInstance(Locale.CANADA).format(durhamCollege.getTotalMoneyEarned()));
 
         niinsima.payFees(5000);
