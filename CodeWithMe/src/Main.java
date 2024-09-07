@@ -38,6 +38,7 @@ public class Main {
         System.out.println(NumberFormat.getCurrencyInstance(Locale.CANADA).format(durhamCollege.getTotalMoneyEarned()));
 
         niinsima.payFees(5000);
+        niinsima.payFees(500);
         System.out.println(NumberFormat.getCurrencyInstance(Locale.CANADA).format(durhamCollege.getTotalMoneyEarned()));
 
         sammer.payFees(4500);
